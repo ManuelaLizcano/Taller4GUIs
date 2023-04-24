@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>325</x>
+      <y>180</y>
+      <w>185</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JFrame&gt;&gt;
+VentanaLights
+--
+modelo:Tablero
+panelNorth:PanelConfiguracion
+panelEast:PanelOpcionesBotones
+panelWest:PanelTablero
+panelSouth:PanelResultado
+top:Top10
+topFrame:JFrame
+--
+VentanaLights()
+main(String[] args)
+darTamañoCuadricula()
+nuevoTablero()
+jugadas()
+top10()
+jugadorCambio()
+cambioJugadas(int jugadas)
+getPuntosTotales()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>535</x>
+      <y>190</y>
+      <w>165</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JPanel-MouseListener&gt;&gt;
+PanelTablero
+--
+ventanadef:VentanaLights
+tablero:Tablero
+len:int
+largo:int
+jugadas:int
+fila:int
+columna:int
+cuadritos:int
+puntosTotales:int
+--
+PanelTablero(VentanaLights ventana, int tamaño)
+paintComponent(Graphics g)
+convertirCoordenadasACasilla(int cx, int cy)
+tableroNuevo(int tamaño)
+reiniciar(int tamaño)
+cantidad()
+getPuntosTotales()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>390</y>
+      <w>190</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JPanel-ActionListener&gt;&gt;
+PanelOpcionesBotones
+--
+ventanadef:VentanaLights
+nuevo:JButton
+reiniciar:JButton
+top10:JButton
+cambiar:JButton
+extra:JLabel
+--
+PanelOpcionesBotones(VentanaLights ventana)
+actionPerformed(ActionEvent e)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>125</x>
+      <y>195</y>
+      <w>155</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JPanel&gt;&gt;
+PanelResultado
+--
+ventanadef:VentanaLights
+jugadas1:JLabel
+jugadasResultado:JTextField
+jugador:JLabel
+jugadorNombre:JTextField
+cuadricula:PanelTablero
+Top10:Map&lt;String,Integer&gt;
+--
+PanelResultado(VentanaLights ventana)
+cambioJugador()
+cambiojugadas(int jugadas)
+listaTop()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>175</x>
+      <y>370</y>
+      <w>190</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JPanel-ActionListener&gt;&gt;
+PanelConfiguracion
+--
+ventanadef:VentanaLights
+grupo:ButtonGroup
+comboBox:JComboBox
+cuadricula:PanelTablero
+eleccion:String
+tamaño_eleccion:int
+--
+PanelConfiguracion(VentanaLights ventana)
+actionPerformed(ActionEvent e)
+getTamaño()
+setcomboBox()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>275</x>
+      <y>230</y>
+      <w>60</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>505</x>
+      <y>260</y>
+      <w>40</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>295</x>
+      <y>315</y>
+      <w>40</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>495</x>
+      <y>335</y>
+      <w>15</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>545</x>
+      <y>90</y>
+      <w>90</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Tablero
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>90</y>
+      <w>90</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Top10
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>425</x>
+      <y>140</y>
+      <w>15</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>585</x>
+      <y>140</y>
+      <w>15</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>125</y>
+      <w>65</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+</diagram>
